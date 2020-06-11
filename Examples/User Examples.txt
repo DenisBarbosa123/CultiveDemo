@@ -1,0 +1,89 @@
+EndPoint: GET localhost:8080/api/v1/user/id
+Response Status : 200
+Request Body: Não possui
+
+Response Body:
+{
+	"id" : 1,
+	"name" : "Denis",
+	"email" : "denis@gmail.com",
+	"phone" : "3599999-9999",
+	"address" {
+		"id" : 2,
+		"neighbourhood" : "Centro",
+		"city" : "Pouso Alegre",
+		"state" : "Minas Gerais"
+	}
+}
+
+EndPoint: POST localhost:8080/api/v1/user
+Response Status : 201
+Request Body: 
+{
+	"name" : "José",
+	"email" : "jose@gmail.com",
+	"phone" : "3599999-9999",
+	"address" {
+		"neighbourhood" : "Centro",
+		"city" : "Pouso Alegre",
+		"state" : "Minas Gerais"
+	}
+}
+
+Response Body:
+{
+	"id" : 1234,
+	"name" : "José",
+	"email" : "jose@gmail.com",
+	"phone" : "3599999-9999",
+	"address" {
+		"id" : 234,
+		"neighbourhood" : "Centro",
+		"city" : "Pouso Alegre",
+		"state" : "Minas Gerais"
+	}
+}
+
+EndPoint: PUT localhost:8080/api/v1/user/id
+Response Status : 200
+Old User: 
+{
+    "id" : 1234,
+	"name" : "José",
+	"email" : "jose@gmail.com",
+	"phone" : "3599999-9999",
+}
+
+Request Body: 
+{
+	"address" {
+		"neighbourhood" : "Centro",
+		"city" : "Pouso Alegre",
+		"state" : "Minas Gerais"
+	}
+}
+
+Response Body:
+{
+	"id" : 1234,
+	"name" : "José",
+	"email" : "jose@gmail.com",
+	"phone" : "3599999-9999",
+	"address" {
+		"id" : 234,
+		"neighbourhood" : "Centro",
+		"city" : "Pouso Alegre",
+		"state" : "Minas Gerais"
+	}
+}
+
+EndPoint: DELETE localhost:8080/api/v1/user/id
+
+Response Status : 204 No content
+
+Request Body: Não possui
+
+Response Body: Não Possui
+
+
+

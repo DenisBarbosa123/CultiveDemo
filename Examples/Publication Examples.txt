@@ -1,0 +1,258 @@
+EndPoint GET localhost:8080/api/publications
+
+Response Status : 200
+Request Body: Não possui
+
+Response Body:
+{
+	{
+		"id" : 1,
+		"title" : "publication title",
+		"body" : "dummy",
+		"creationDate" : "2014-02-01T09:28:56.321-10:00",
+		"user" : {
+			"id" : 1,
+			"name" : "Denis",
+			"email" : "denis@gmail.com",
+			"phone" : "3599999-9999",
+			"address" {
+				"id" : 2,
+				"neighbourhood" : "Centro",
+				"city" : "Pouso Alegre",
+				"state" : "Minas Gerais"
+			}
+		},
+		"product" {
+			"id" : 2,
+			"name" : "Product_1",
+			"value" : 1.90
+		},
+		image: [
+			{
+				"id" : 1,
+				"image" : "efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnj"
+			}
+		]
+	},
+	{
+		"id" : 2,
+		"title" : "publication title 2",
+		"body" : "dummy",
+		"creationDate" : "2014-02-01T09:28:56.321-10:00",
+		"user" : {
+			"id" : 1,
+			"name" : "José",
+			"email" : "jose@gmail.com",
+			"phone" : "3599999-9999",
+			"address" {
+				"id" : 2,
+				"neighbourhood" : "São João",
+				"city" : "Pouso Alegre",
+				"state" : "Minas Gerais"
+			}
+		},
+		"product" {
+			"id" : 2,
+			"name" : "Product_1",
+			"value" : 1.90
+		},
+		image: [
+			{
+				"id" : 1,
+				"image" : "efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnjergegeg"
+			},
+			{
+				"id" : 2,
+				"image" : "efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnjergegerg"
+			}
+		]
+	}
+}
+
+EndPoint GET  localhost:8080/api/publication/id
+Response Status : 200
+Request Body: Não possui
+
+Response Body:
+
+	{
+		"id" : 2,
+		"title" : "publication title 2",
+		"body" : "dummy",
+		"creationDate" : "2014-02-01T09:28:56.321-10:00",
+		"user" : {
+			"id" : 1,
+			"name" : "José",
+			"email" : "jose@gmail.com",
+			"phone" : "3599999-9999",
+			"address" {
+				"id" : 2,
+				"neighbourhood" : "São João",
+				"city" : "Pouso Alegre",
+				"state" : "Minas Gerais"
+			}
+		},
+		"product" {
+			"id" : 2,
+			"name" : "Product_1",
+			"value" : 1.90
+		},
+		image: [
+			{
+				"id" : 1,
+				"image" : "efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnjergegeg"
+			},
+			{
+				"id" : 2,
+				"image" : "efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnjergegerg"
+			}
+		]
+	}
+
+EndPoint POST localhost:8080/api/user/id/publication
+Response Status : 201
+Request Body: 
+	{
+		"title" : "publication title 2",
+		"body" : "dummy",
+		"product" {
+			"id" : 2,
+			"name" : "Product_1",
+			"value" : 1.90
+		},
+		image: [
+			{
+				"id" : 1,
+				"image" : "efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnjergegeg"
+			},
+			{
+				"id" : 2,
+				"image" : "efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnjergegerg"
+			}
+		]
+	}
+
+Response Body:
+
+	{
+		"id" : 2,
+		"title" : "publication title 2",
+		"body" : "dummy",
+		"creationDate" : "2014-02-01T09:28:56.321-10:00",
+		"user" : {
+			"id" : 1,
+			"name" : "José",
+			"email" : "jose@gmail.com",
+			"phone" : "3599999-9999",
+			"address" {
+				"id" : 2,
+				"neighbourhood" : "São João",
+				"city" : "Pouso Alegre",
+				"state" : "Minas Gerais"
+			}
+		},
+		"product" {
+			"id" : 2,
+			"name" : "Product_1",
+			"value" : 1.90
+		},
+		image: [
+			{
+				"id" : 1,
+				"image" : "efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnjergegeg"
+			},
+			{
+				"id" : 2,
+				"image" : "efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnjergegerg"
+			}
+		]
+	}
+
+
+EndPoint: PUT localhost:8080/api/v1/user/id
+Response Status : 200
+Old Publication : 
+{
+		"id" : 2,
+		"title" : "publication title 2",
+		"body" : "dummy",
+		"creationDate" : "2014-02-01T09:28:56.321-10:00",
+		"user" : {
+			"id" : 1,
+			"name" : "José",
+			"email" : "jose@gmail.com",
+			"phone" : "3599999-9999",
+			"address" {
+				"id" : 2,
+				"neighbourhood" : "São João",
+				"city" : "Pouso Alegre",
+				"state" : "Minas Gerais"
+			}
+		},
+		image: [
+			{
+				"id" : 1,
+				"image" : "efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnjergegeg"
+			},
+			{
+				"id" : 2,
+				"image" : "efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnjergegerg"
+			}
+		]
+}
+
+Request Body: 
+{
+	"product" {
+		"id" : 2,
+		"name" : "Product_1",
+		"value" : 1.90
+	}
+}
+Response Body
+{
+		"id" : 2,
+		"title" : "publication title 2",
+		"body" : "dummy",
+		"creationDate" : "2014-02-01T09:28:56.321-10:00",
+		"user" : {
+			"id" : 1,
+			"name" : "José",
+			"email" : "jose@gmail.com",
+			"phone" : "3599999-9999",
+			"address" {
+				"id" : 2,
+				"neighbourhood" : "São João",
+				"city" : "Pouso Alegre",
+				"state" : "Minas Gerais"
+			}
+		},
+		"product" {
+			"id" : 2,
+			"name" : "Product_1",
+			"value" : 1.90
+		},
+		image: [
+			{
+				"id" : 1,
+				"image" : "efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnjergegeg"
+			},
+			{
+				"id" : 2,
+				"image" : "efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnjergegerg"
+			}
+		]
+}
+
+EndPoint: DELETE localhost:8080/api/publication/id
+
+Response Status : 204 No content
+
+Request Body: Não possui
+
+Response Body: Não Possui
+
+
+
+
+
