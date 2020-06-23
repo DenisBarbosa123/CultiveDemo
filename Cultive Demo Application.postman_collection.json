@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "31b9724a-08db-4a2f-9963-629cfdaa66e6",
+		"name": "Cultive Demo Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USER REQUESTS",
+			"item": [
+				{
+					"name": "GET ALL USERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://cultivedemospringboot.herokuapp.com/api/v1/user"
+					},
+					"response": []
+				},
+				{
+					"name": "GET USER BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://cultivedemospringboot.herokuapp.com/api/v1/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\" : \"jose\",\r\n\t\"email\" : \"jose@gmail.com\",\r\n    \"password\" : \"teste123\",\r\n\t\"phone\" : \"3599999-9999\",\r\n    \"mobilePhone\" : \"324225\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://cultivedemospringboot.herokuapp.com/api/v1/user"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE USER BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://cultivedemospringboot.herokuapp.com/api/v1/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE USER BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\" : {\r\n\t\t\"neighborhood\" : \"Centro\",\r\n\t\t\"city\" : \"Pouso Alegre\",\r\n\t\t\"state\" : \"Minas Gerais\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://cultivedemospringboot.herokuapp.com/api/v1/user/1"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PUBLICATION REQUESTS",
+			"item": [
+				{
+					"name": "PUBLICATION CREATION",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"publication title\",\r\n    \"body\": \"dummy\",\r\n    \"creationDate\": \"2014-02-01T09:28:56.321-10:00\",\r\n    \"product\": {\r\n        \"name\": \"Product_1\",\r\n        \"value\": 1.90\r\n    },\r\n    \"images\": [\r\n        {\r\n            \"image\": \"efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnj\"\r\n        },\r\n        {\r\n            \"image\": \"efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnj\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://cultivedemospringboot.herokuapp.com/api/v1/user/1/publication"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE PUBLICATION BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://cultivedemospringboot.herokuapp.com/api/v1/publication/66"
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PUBLICATIONS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://cultivedemospringboot.herokuapp.com/api/v1/publication"
+					},
+					"response": []
+				},
+				{
+					"name": "GET PUBLICATION BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://cultivedemospringboot.herokuapp.com/api/v1/publication/3"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE PUBLICATION BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"publication title test\",\r\n    \"body\": \"dummy test\",\r\n    \"images\": [\r\n        {\r\n            \"image\": \"efhasbiabiskjbsjgbskbdgobaskakjsndfkvjnj\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://cultivedemospringboot.herokuapp.com/api/v1/publication/3"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
